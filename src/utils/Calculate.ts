@@ -1,16 +1,30 @@
-const sum = function(...params: number[]) {
+function sum(...params: number[]) {
   if(!params || params.length === 0) {
     return 0;
   }
   return params.reduce((a, b) => a + b);
 };
 
-function subtract() {
-
+function subtract(...params: number[]) {
+  if(!params || params.length === 0) {
+    return 0;
+  }
+  return params.reduce((a, b) => a - b);
 }
 
-function square() {
-
+function multiply(...params: number[]) {
+  if(!params || params.length === 0) {
+    return 0;
+  }
+  return params.reduce((a, b) => a * b);
 }
 
-export { sum, subtract, square };
+function division( divider: number, dividend: number,): number | string {
+
+  if(dividend === 0) {
+    return 'ERROR'
+  }
+  return Number((divider / dividend).toFixed(2))
+}
+
+export { sum, subtract, multiply, division };

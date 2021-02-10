@@ -3,11 +3,12 @@ import { Button } from '@material-ui/core';
 import { KeyboardList } from '../utils/keyboardList';
 
 
-const KeyboardPanel = ({ onClick }:any) => {
+const KeyboardPanel = ({ onClick }: any) => {
   return (
+    <>
       <div className='panel'>
         {KeyboardList.map((item, key) => {
-          return (<div key={item.label}>
+          return (<span key={item.label}>
               {(key % 4 === 0) && <br />}
               <Button
                 key={item.label}
@@ -17,10 +18,11 @@ const KeyboardPanel = ({ onClick }:any) => {
               >
                 {item.label}
               </Button>
-            </div>
+            </span>
           );
         })}
       </div>
+    </>
   );
 };
 
