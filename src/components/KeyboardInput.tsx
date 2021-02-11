@@ -6,6 +6,7 @@ const Panel = styled.div`
   color: #ffffff;
   padding: 10px;
   border-radius: 5px;
+  height: 1.5em;
 `;
 
 const KeyboardInput = ({ input, onChange }: any) => {
@@ -20,21 +21,13 @@ const KeyboardInput = ({ input, onChange }: any) => {
       setResult(0);
     };
   }, [input, onChange]);
+
   switch (input) {
     case '+':
       console.log('++');
       break;
-    case '-':
-      console.log('--');
-      break;
-    case 'x':
-      console.log('xx');
-      break;
-    case '÷':
-      console.log('÷÷');
-      break;
     case '=':
-      console.log('==');
+      console.log(result,'result');
       break;
   }
   return (
