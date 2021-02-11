@@ -74,5 +74,4 @@ describe('Testing function division', () => {
   test('function division negative return', () => {
     expect(division(-20 ,5)).toEqual(-4);
   });
-
 });
